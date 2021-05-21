@@ -1,0 +1,35 @@
+# 配置端口
+server:
+ port: 8080
+spring:
+ profiles:
+  active: dev # 环境设置
+ datasource:
+ # 配置数据源
+   driver-class-name: com.mysql.jdbc.Driver
+   url: jdbc:mysql://localhost:3306/srb?serverTimezone=UTC&useUnicode=true&useSSL=false&characterEncoding=utf8
+   username: root
+   password: 123456
+
+# mybatis-plus相关配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    # 逻辑删除配置
+    db-config:
+      # 删除前
+      logic-not-delete-value: 1
+      # 删除后
+      logic-delete-value: 0
+
+
+aliyun:
+  oss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    keyId: LTAI5tQ385q38H2ro5ta2ayh
+    keySecret: 448vSBe48bHZKBkHO25c99CQJ2TM0B
+    bucketName: wawahei-bucket
