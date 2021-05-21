@@ -33,3 +33,10 @@ aliyun:
     keyId: LTAI5tQ385q38H2ro5ta2ay*
     keySecret: 448vSBe48bHZKBkHO25c99CQJ2TM0*
     bucketName: wawahei
+
+sftp:
+  config:
+    username: wawahei
+    password: 123456
+    home-directory: E:\yhl\git_workspace\nanyuan\docs
+    port: 4444
