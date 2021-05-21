@@ -1,5 +1,6 @@
-package com.wawahei.kk.demo.nanyuan.entity;
+package com.wawahei.kk.demo.nanyuan.pojo.entity;
 
+import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
@@ -10,7 +11,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 用户积分记录表
+ * 借款信息表
  * </p>
  *
  * @author wawahei
@@ -19,7 +20,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class UserIntegral implements Serializable {
+public class BorrowInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,19 +31,39 @@ public class UserIntegral implements Serializable {
     private Long id;
 
     /**
-     * 用户id
+     * 借款用户id
      */
     private Long userId;
 
     /**
-     * 积分
+     * 借款金额
      */
-    private Integer integral;
+    private BigDecimal amount;
 
     /**
-     * 获取积分说明
+     * 借款期限
      */
-    private String content;
+    private Integer period;
+
+    /**
+     * 年化利率
+     */
+    private BigDecimal borrowYearRate;
+
+    /**
+     * 还款方式 1-等额本息 2-等额本金 3-每月还息一次还本 4-一次还本
+     */
+    private Integer returnMethod;
+
+    /**
+     * 资金用途
+     */
+    private Integer moneyUse;
+
+    /**
+     * 状态（0：未提交，1：审核中， 2：审核通过， -1：审核不通过）
+     */
+    private Integer status;
 
     /**
      * 创建时间

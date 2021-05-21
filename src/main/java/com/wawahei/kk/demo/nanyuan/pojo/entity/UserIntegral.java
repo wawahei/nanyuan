@@ -1,4 +1,4 @@
-package com.wawahei.kk.demo.nanyuan.entity;
+package com.wawahei.kk.demo.nanyuan.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 用户登录记录表
+ * 用户积分记录表
  * </p>
  *
  * @author wawahei
@@ -19,7 +19,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class UserLoginRecord implements Serializable {
+public class UserIntegral implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -35,9 +35,14 @@ public class UserLoginRecord implements Serializable {
     private Long userId;
 
     /**
-     * ip
+     * 积分
      */
-    private String ip;
+    private Integer integral;
+
+    /**
+     * 获取积分说明
+     */
+    private String content;
 
     /**
      * 创建时间

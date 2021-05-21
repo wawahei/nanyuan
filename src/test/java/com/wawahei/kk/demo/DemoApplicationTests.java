@@ -2,7 +2,7 @@ package com.wawahei.kk.demo;
 
 import com.wawahei.kk.demo.nanyuan.DemoApplication;
 import com.wawahei.kk.demo.nanyuan.common.util.JwtUtils;
-import com.wawahei.kk.demo.nanyuan.entity.Dict;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.Dict;
 import com.wawahei.kk.demo.nanyuan.service.impl.DictServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;

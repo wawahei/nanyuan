@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.mapper;
 
-import com.wawahei.kk.demo.nanyuan.entity.UserAccount;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.UserAccount;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

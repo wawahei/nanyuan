@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.service.impl;
 
-import com.wawahei.kk.demo.nanyuan.entity.IntegralGrade;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.IntegralGrade;
 import com.wawahei.kk.demo.nanyuan.mapper.IntegralGradeMapper;
 import com.wawahei.kk.demo.nanyuan.service.IIntegralGradeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

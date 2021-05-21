@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.service.impl;
 
-import com.wawahei.kk.demo.nanyuan.entity.BorrowInfo;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.BorrowInfo;
 import com.wawahei.kk.demo.nanyuan.mapper.BorrowInfoMapper;
 import com.wawahei.kk.demo.nanyuan.service.IBorrowInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

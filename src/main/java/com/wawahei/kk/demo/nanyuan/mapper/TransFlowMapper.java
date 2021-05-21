@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.mapper;
 
-import com.wawahei.kk.demo.nanyuan.entity.TransFlow;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.TransFlow;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

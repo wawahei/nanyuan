@@ -1,9 +1,10 @@
 package com.wawahei.kk.demo.nanyuan.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.wawahei.kk.demo.nanyuan.common.exception.BusinessException;
 import com.wawahei.kk.demo.nanyuan.common.result.R;
-import com.wawahei.kk.demo.nanyuan.entity.Dict;
+import com.wawahei.kk.demo.nanyuan.common.result.ResponseEnum;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.Dict;
 import com.wawahei.kk.demo.nanyuan.service.IDictService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -16,8 +17,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -35,6 +39,22 @@ public class DictController {
 
     @Autowired
     private IDictService dictService;
+
+    @ApiOperation("Excel数据的批量导入")
+    @PostMapping("/import")
+    public R batchImport(
+            @ApiParam(value = "Excel数据字典文件", required = true)
+            @RequestParam("file") MultipartFile file){
+
+        try {
+            InputStream inputStream = file.getInputStream();
+            dictService.importData(inputStream);
+            return R.ok().message("数据字典数据批量导入成功");
+
+        } catch (Exception e) {
+            throw new BusinessException(ResponseEnum.UPLOAD_ERROR, e);
+        }
+    }
 
     @PostMapping("save")
     @ApiOperation(value = "保存用户",notes = "添加用户2")
@@ -69,4 +89,5 @@ public class DictController {
         Dict dict = dictService.getById(id);
         return R.ok().data("dict",dict);
     }
+
 }

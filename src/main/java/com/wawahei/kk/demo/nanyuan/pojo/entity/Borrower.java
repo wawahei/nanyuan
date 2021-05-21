@@ -1,8 +1,6 @@
-package com.wawahei.kk.demo.nanyuan.entity;
+package com.wawahei.kk.demo.nanyuan.pojo.entity;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.time.LocalDate;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import java.io.Serializable;
@@ -12,7 +10,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 标的出借记录表
+ * 借款人
  * </p>
  *
  * @author wawahei
@@ -21,7 +19,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class LendItem implements Serializable {
+public class Borrower implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -32,62 +30,77 @@ public class LendItem implements Serializable {
     private Long id;
 
     /**
-     * 投资编号
+     * 用户id
      */
-    private String lendItemNo;
+    private Long userId;
 
     /**
-     * 标的id
+     * 姓名
      */
-    private Long lendId;
+    private String name;
 
     /**
-     * 投资用户id
+     * 身份证号
      */
-    private Long investUserId;
+    private String idCard;
 
     /**
-     * 投资人名称
+     * 手机
      */
-    private String investName;
+    private String mobile;
 
     /**
-     * 投资金额
+     * 性别（1：男 0：女）
      */
-    private BigDecimal investAmount;
+    private Integer sex;
 
     /**
-     * 年化利率
+     * 年龄
      */
-    private BigDecimal lendYearRate;
+    private Integer age;
 
     /**
-     * 投资时间
+     * 学历
      */
-    private LocalDateTime investTime;
+    private Integer education;
 
     /**
-     * 开始日期
+     * 是否结婚（1：是 0：否）
      */
-    private LocalDate lendStartDate;
+    private Boolean isMarry;
 
     /**
-     * 结束日期
+     * 行业
      */
-    private LocalDate lendEndDate;
+    private Integer industry;
 
     /**
-     * 预期收益
+     * 月收入
      */
-    private BigDecimal expectAmount;
+    private Integer income;
 
     /**
-     * 实际收益
+     * 还款来源
      */
-    private BigDecimal realAmount;
+    private Integer returnSource;
 
     /**
-     * 状态（0：默认 1：已支付 2：已还款）
+     * 联系人名称
+     */
+    private String contactsName;
+
+    /**
+     * 联系人手机
+     */
+    private String contactsMobile;
+
+    /**
+     * 联系人关系
+     */
+    private Integer contactsRelation;
+
+    /**
+     * 状态（0：未认证，1：认证中， 2：认证通过， -1：认证失败）
      */
     private Integer status;
 

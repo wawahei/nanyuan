@@ -1,4 +1,4 @@
-package com.wawahei.kk.demo.nanyuan.entity;
+package com.wawahei.kk.demo.nanyuan.pojo.entity;
 
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 标的准备表
+ * 标的出借记录表
  * </p>
  *
  * @author wawahei
@@ -21,7 +21,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Lend implements Serializable {
+public class LendItem implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -32,34 +32,29 @@ public class Lend implements Serializable {
     private Long id;
 
     /**
-     * 借款用户id
+     * 投资编号
      */
-    private Long userId;
+    private String lendItemNo;
 
     /**
-     * 借款信息id
+     * 标的id
      */
-    private Long borrowInfoId;
+    private Long lendId;
 
     /**
-     * 标的编号
+     * 投资用户id
      */
-    private String lendNo;
+    private Long investUserId;
 
     /**
-     * 标题
+     * 投资人名称
      */
-    private String title;
+    private String investName;
 
     /**
-     * 标的金额
+     * 投资金额
      */
-    private BigDecimal amount;
-
-    /**
-     * 投资期数
-     */
-    private Integer period;
+    private BigDecimal investAmount;
 
     /**
      * 年化利率
@@ -67,34 +62,9 @@ public class Lend implements Serializable {
     private BigDecimal lendYearRate;
 
     /**
-     * 平台服务费率
+     * 投资时间
      */
-    private BigDecimal serviceRate;
-
-    /**
-     * 还款方式
-     */
-    private Integer returnMethod;
-
-    /**
-     * 最低投资金额
-     */
-    private BigDecimal lowestAmount;
-
-    /**
-     * 已投金额
-     */
-    private BigDecimal investAmount;
-
-    /**
-     * 投资人数
-     */
-    private Integer investNum;
-
-    /**
-     * 发布日期
-     */
-    private LocalDateTime publishDate;
+    private LocalDateTime investTime;
 
     /**
      * 开始日期
@@ -107,12 +77,7 @@ public class Lend implements Serializable {
     private LocalDate lendEndDate;
 
     /**
-     * 说明
-     */
-    private String lendInfo;
-
-    /**
-     * 平台预期收益
+     * 预期收益
      */
     private BigDecimal expectAmount;
 
@@ -122,29 +87,9 @@ public class Lend implements Serializable {
     private BigDecimal realAmount;
 
     /**
-     * 状态
+     * 状态（0：默认 1：已支付 2：已还款）
      */
     private Integer status;
-
-    /**
-     * 审核时间
-     */
-    private LocalDateTime checkTime;
-
-    /**
-     * 审核用户id
-     */
-    private Long checkAdminId;
-
-    /**
-     * 放款时间
-     */
-    private LocalDateTime paymentTime;
-
-    /**
-     * 放款人id
-     */
-    private LocalDateTime paymentAdminId;
 
     /**
      * 创建时间

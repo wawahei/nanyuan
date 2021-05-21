@@ -1,7 +1,9 @@
 package com.wawahei.kk.demo.nanyuan.service;
 
-import com.wawahei.kk.demo.nanyuan.entity.Dict;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.Dict;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.io.InputStream;
 
 /**
  * <p>
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IDictService extends IService<Dict> {
 
+    void importData(InputStream inputStream);
 }

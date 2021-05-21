@@ -1,4 +1,4 @@
-package com.wawahei.kk.demo.nanyuan.entity;
+package com.wawahei.kk.demo.nanyuan.pojo.entity;
 
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 交易流水表
+ * 积分等级表
  * </p>
  *
  * @author wawahei
@@ -20,7 +20,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class TransFlow implements Serializable {
+public class IntegralGrade implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,39 +31,19 @@ public class TransFlow implements Serializable {
     private Long id;
 
     /**
-     * 用户id
+     * 积分区间开始
      */
-    private Long userId;
+    private Integer integralStart;
 
     /**
-     * 用户名称
+     * 积分区间结束
      */
-    private String userName;
+    private Integer integralEnd;
 
     /**
-     * 交易单号
+     * 借款额度
      */
-    private String transNo;
-
-    /**
-     * 交易类型（1：充值 2：提现 3：投标 4：投资回款 ...）
-     */
-    private Integer transType;
-
-    /**
-     * 交易类型名称
-     */
-    private String transTypeName;
-
-    /**
-     * 交易金额
-     */
-    private BigDecimal transAmount;
-
-    /**
-     * 备注
-     */
-    private String memo;
+    private BigDecimal borrowAmount;
 
     /**
      * 创建时间

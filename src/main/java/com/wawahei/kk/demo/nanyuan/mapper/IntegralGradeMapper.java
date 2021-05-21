@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.mapper;
 
-import com.wawahei.kk.demo.nanyuan.entity.IntegralGrade;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.IntegralGrade;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

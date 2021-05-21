@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.mapper;
 
-import com.wawahei.kk.demo.nanyuan.entity.BorrowInfo;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.BorrowInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

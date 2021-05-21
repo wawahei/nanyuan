@@ -1,4 +1,4 @@
-package com.wawahei.kk.demo.nanyuan.entity;
+package com.wawahei.kk.demo.nanyuan.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 用户基本信息
+ * 用户绑定表
  * </p>
  *
  * @author wawahei
@@ -19,7 +19,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class UserInfo implements Serializable {
+public class UserBind implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,24 +30,9 @@ public class UserInfo implements Serializable {
     private Long id;
 
     /**
-     * 1：出借人 2：借款人
+     * 用户id
      */
-    private Integer userType;
-
-    /**
-     * 手机号
-     */
-    private String mobile;
-
-    /**
-     * 用户密码
-     */
-    private String password;
-
-    /**
-     * 用户昵称
-     */
-    private String nickName;
+    private Long userId;
 
     /**
      * 用户姓名
@@ -60,29 +45,19 @@ public class UserInfo implements Serializable {
     private String idCard;
 
     /**
-     * 邮箱
+     * 银行卡号
      */
-    private String email;
+    private String bankNo;
 
     /**
-     * 微信用户标识openid
+     * 银行类型
      */
-    private String openid;
+    private String bankType;
 
     /**
-     * 头像
+     * 手机号
      */
-    private String headImg;
-
-    /**
-     * 绑定状态（0：未绑定，1：绑定成功 -1：绑定失败）
-     */
-    private Integer bindStatus;
-
-    /**
-     * 借款人认证状态（0：未认证 1：认证中 2：认证通过 -1：认证失败）
-     */
-    private Integer borrowAuthStatus;
+    private String mobile;
 
     /**
      * 绑定账户协议号
@@ -90,12 +65,7 @@ public class UserInfo implements Serializable {
     private String bindCode;
 
     /**
-     * 用户积分
-     */
-    private Integer integral;
-
-    /**
-     * 状态（0：锁定 1：正常）
+     * 状态
      */
     private Integer status;
 

@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.service.impl;
 
-import com.wawahei.kk.demo.nanyuan.entity.UserAccount;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.UserAccount;
 import com.wawahei.kk.demo.nanyuan.mapper.UserAccountMapper;
 import com.wawahei.kk.demo.nanyuan.service.IUserAccountService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

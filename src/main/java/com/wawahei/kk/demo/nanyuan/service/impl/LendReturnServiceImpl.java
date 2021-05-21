@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.service.impl;
 
-import com.wawahei.kk.demo.nanyuan.entity.LendReturn;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.LendReturn;
 import com.wawahei.kk.demo.nanyuan.mapper.LendReturnMapper;
 import com.wawahei.kk.demo.nanyuan.service.ILendReturnService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

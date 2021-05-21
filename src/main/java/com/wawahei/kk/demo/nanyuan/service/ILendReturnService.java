@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.service;
 
-import com.wawahei.kk.demo.nanyuan.entity.LendReturn;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.LendReturn;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

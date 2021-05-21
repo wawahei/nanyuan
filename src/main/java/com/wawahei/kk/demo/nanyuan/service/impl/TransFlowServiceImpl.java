@@ -1,6 +1,6 @@
 package com.wawahei.kk.demo.nanyuan.service.impl;
 
-import com.wawahei.kk.demo.nanyuan.entity.TransFlow;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.TransFlow;
 import com.wawahei.kk.demo.nanyuan.mapper.TransFlowMapper;
 import com.wawahei.kk.demo.nanyuan.service.ITransFlowService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

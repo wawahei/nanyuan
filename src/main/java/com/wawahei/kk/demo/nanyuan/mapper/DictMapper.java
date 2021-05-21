@@ -1,7 +1,10 @@
 package com.wawahei.kk.demo.nanyuan.mapper;
 
-import com.wawahei.kk.demo.nanyuan.entity.Dict;
+import com.wawahei.kk.demo.nanyuan.pojo.dto.ExcelDictDTO;
+import com.wawahei.kk.demo.nanyuan.pojo.entity.Dict;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface DictMapper extends BaseMapper<Dict> {
 
+    void insertBatch(List<ExcelDictDTO> list);
 }

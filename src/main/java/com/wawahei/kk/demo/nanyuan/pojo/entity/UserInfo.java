@@ -1,4 +1,4 @@
-package com.wawahei.kk.demo.nanyuan.entity;
+package com.wawahei.kk.demo.nanyuan.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 借款人
+ * 用户基本信息
  * </p>
  *
  * @author wawahei
@@ -19,7 +19,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Borrower implements Serializable {
+public class UserInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,12 +30,27 @@ public class Borrower implements Serializable {
     private Long id;
 
     /**
-     * 用户id
+     * 1：出借人 2：借款人
      */
-    private Long userId;
+    private Integer userType;
 
     /**
-     * 姓名
+     * 手机号
+     */
+    private String mobile;
+
+    /**
+     * 用户密码
+     */
+    private String password;
+
+    /**
+     * 用户昵称
+     */
+    private String nickName;
+
+    /**
+     * 用户姓名
      */
     private String name;
 
@@ -45,62 +60,42 @@ public class Borrower implements Serializable {
     private String idCard;
 
     /**
-     * 手机
+     * 邮箱
      */
-    private String mobile;
+    private String email;
 
     /**
-     * 性别（1：男 0：女）
+     * 微信用户标识openid
      */
-    private Integer sex;
+    private String openid;
 
     /**
-     * 年龄
+     * 头像
      */
-    private Integer age;
+    private String headImg;
 
     /**
-     * 学历
+     * 绑定状态（0：未绑定，1：绑定成功 -1：绑定失败）
      */
-    private Integer education;
+    private Integer bindStatus;
 
     /**
-     * 是否结婚（1：是 0：否）
+     * 借款人认证状态（0：未认证 1：认证中 2：认证通过 -1：认证失败）
      */
-    private Boolean isMarry;
+    private Integer borrowAuthStatus;
 
     /**
-     * 行业
+     * 绑定账户协议号
      */
-    private Integer industry;
+    private String bindCode;
 
     /**
-     * 月收入
+     * 用户积分
      */
-    private Integer income;
+    private Integer integral;
 
     /**
-     * 还款来源
-     */
-    private Integer returnSource;
-
-    /**
-     * 联系人名称
-     */
-    private String contactsName;
-
-    /**
-     * 联系人手机
-     */
-    private String contactsMobile;
-
-    /**
-     * 联系人关系
-     */
-    private Integer contactsRelation;
-
-    /**
-     * 状态（0：未认证，1：认证中， 2：认证通过， -1：认证失败）
+     * 状态（0：锁定 1：正常）
      */
     private Integer status;
 
