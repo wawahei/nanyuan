@@ -41,6 +41,13 @@ sftp:
     home-directory: E:\yhl\git_workspace\nanyuan\docs
     port: 4444
 
+ftp:
+  config:
+    username: kk
+    password: 123456
+    home-directory: E:\yhl\git_workspace\nanyuan\docs
+    port: 5555
+
 task:
   cron:
     expression:

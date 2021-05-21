@@ -1,6 +1,7 @@
 package com.wawahei.kk.demo.nanyuan;
 
 import com.wawahei.kk.demo.nanyuan.config.TaskCronExpressionProperties;
+import com.wawahei.kk.demo.nanyuan.ftp.TransferFtpServer;
 import com.wawahei.kk.demo.nanyuan.sftp.SFTPServerHolder;
 import com.wawahei.kk.demo.nanyuan.task.ScheduledJob;
 import lombok.extern.slf4j.Slf4j;
@@ -33,6 +34,9 @@ public class DemoApplication implements CommandLineRunner, ApplicationListener<C
 	private SFTPServerHolder sftpServerHolder;
 
 	@Resource
+	private TransferFtpServer transferFtpServer;
+
+	@Resource
 	private TaskCronExpressionProperties taskCronExpressionProperties;
 
 	@Resource
@@ -46,9 +50,18 @@ public class DemoApplication implements CommandLineRunner, ApplicationListener<C
 	@Override
 	public void run(String... args) throws Exception {
 
+		startFtp();
+
 		startSftp();
 
 		startTask();
+	}
+
+	private void startFtp() throws Exception {
+		//启动FTP服务
+		log.info("ftp server starting ");
+		transferFtpServer.initFTP().start();
+		log.info("ftp server started ");
 	}
 
 	private void startSftp() throws Exception {
@@ -58,7 +71,7 @@ public class DemoApplication implements CommandLineRunner, ApplicationListener<C
 		log.info("sftp server started ");
 	}
 
-	private void startTask() throws Exception{
+	private void  startTask() throws Exception{
 		//启动定时任务服务
 		log.info("ScheduledJob register starting ");
 		//获取所有ScheduledJob注解的bean
