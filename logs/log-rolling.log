@@ -293,3 +293,9 @@ com.aliyun.oss.OSSException: Put bucket request is not resource owner.
 2021-05-21 15:36:37 [INFO ] main StartupInfoLogger.java:50 com.wawahei.kk.demo.nanyuan.DemoApplication Starting DemoApplication on YF-yanghailang with PID 7996 (E:\yhl\git_workspace\nanyuan\target\classes started by yanghailang in E:\yhl\git_workspace\nanyuan)
 2021-05-21 15:36:37 [INFO ] main SpringApplication.java:679 com.wawahei.kk.demo.nanyuan.DemoApplication The following profiles are active: dev
 2021-05-21 15:36:43 [INFO ] main StartupInfoLogger.java:59 com.wawahei.kk.demo.nanyuan.DemoApplication Started DemoApplication in 6.629 seconds (JVM running for 9.352)
+2021-05-21 15:57:06 [INFO ] main StartupInfoLogger.java:50 com.wawahei.kk.demo.DemoApplicationTests Starting DemoApplicationTests on YF-yanghailang with PID 11260 (started by yanghailang in E:\yhl\git_workspace\nanyuan)
+2021-05-21 15:57:06 [INFO ] main SpringApplication.java:679 com.wawahei.kk.demo.DemoApplicationTests The following profiles are active: dev
+2021-05-21 15:57:18 [INFO ] main StartupInfoLogger.java:59 com.wawahei.kk.demo.DemoApplicationTests Started DemoApplicationTests in 13.821 seconds (JVM running for 17.318)
+2021-05-21 15:59:03 [INFO ] main StartupInfoLogger.java:50 com.wawahei.kk.demo.DemoApplicationTests Starting DemoApplicationTests on YF-yanghailang with PID 9624 (started by yanghailang in E:\yhl\git_workspace\nanyuan)
+2021-05-21 15:59:03 [INFO ] main SpringApplication.java:679 com.wawahei.kk.demo.DemoApplicationTests The following profiles are active: dev
+2021-05-21 15:59:13 [INFO ] main StartupInfoLogger.java:59 com.wawahei.kk.demo.DemoApplicationTests Started DemoApplicationTests in 11.658 seconds (JVM running for 14.394)
