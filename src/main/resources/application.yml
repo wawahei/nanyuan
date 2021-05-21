@@ -30,6 +30,6 @@ mybatis-plus:
 aliyun:
   oss:
     endpoint: oss-cn-beijing.aliyuncs.com
-    keyId: LTAI5tQ385q38H2ro5ta2ayh
-    keySecret: 448vSBe48bHZKBkHO25c99CQJ2TM0B
-    bucketName: wawahei-bucket
+    keyId: LTAI5tQ385q38H2ro5ta2ay*
+    keySecret: 448vSBe48bHZKBkHO25c99CQJ2TM0*
+    bucketName: wawahei
