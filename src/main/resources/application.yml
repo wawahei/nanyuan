@@ -40,3 +40,8 @@ sftp:
     password: 123456
     home-directory: E:\yhl\git_workspace\nanyuan\docs
     port: 4444
+
+task:
+  cron:
+    expression:
+      demoTask: 0 0/10 * * * ?
